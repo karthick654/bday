@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Birthday Wishes</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+<style>
+body {
+  text-align: center;
+}
+
+button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 18px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+</style>
+  <div id="birthday-wishes"></div>
+  <button onclick="generateBirthdayWishes()">Happy Birthday Pandu!</button>
+
+  <script>
+  const birthdayWishes = [
+  "Wishing you a day filled with love, joy, and laughter. Happy birthday!",
+  "May this birthday bring you happiness, prosperity, and success in all your endeavors. Have a fantastic day!",
+  "Happy birthday! May your special day be filled with endless love, wonderful surprises, and unforgettable moments.",
+  "Sending you warm birthday wishes and a big hug on your special day. Enjoy and have a blast!",
+  "On your birthday, may all your dreams and wishes come true. Have an amazing celebration!"
+];
+
+function generateBirthdayWishes() {
+  const wishesContainer = document.getElementById('birthday-wishes');
+  const randomIndex = Math.floor(Math.random() * birthdayWishes.length);
+  wishesContainer.textContent = birthdayWishes[randomIndex];
+}
+
+  </script>
+</body>
+</html>
